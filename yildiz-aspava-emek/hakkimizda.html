@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda (Hikayemiz) | Yıldız Aspava Emek — 1978'den Beri</title>
+  <meta name="description" content="Sağlık, Afiyet ve Gelenek: Yıldız Aspava'nın 1978 yılında Esat Caddesi'nde başlayan, Emek, Balgat, İzmir ve Antalya'ya uzanan yarım asırlık hikayesi.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314110E'/><path d='M32 10L38.5 24.5L54 26.5L42.5 37.5L45.5 53L32 45.2L18.5 53L21.5 37.5L10 26.5L25.5 24.5L32 10Z' fill='%23C59D5F'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #14110E;
+      --bg-elevated: #1D1814;
+      --bg-cream: #F4EFE6;
+      --text-primary: #F7F3EB;
+      --text-secondary: #C4B9AA;
+      --accent-gold: #C59D5F;
+      --accent-gold-hover: #D8B274;
+      --accent-gold-soft: rgba(197, 157, 95, 0.15);
+      --border-subtle: rgba(247, 243, 235, 0.11);
+      --border-gold: rgba(197, 157, 95, 0.36);
+      --shadow-color: 10, 7, 4;
+      --spring-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --font-display: 'Playfair Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg-base); color: var(--text-primary); font-family: var(--font-body); line-height: 1.75; }
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(197, 157, 95, 0.14) 0%, transparent 42%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    img { max-width: 100%; display: block; object-fit: cover; }
+    h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; line-height: 1.15; font-weight: 700; }
+    .serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 1.25rem; }
+
+    .elevated-card {
+      background-color: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 1px 2px rgba(var(--shadow-color), 0.04),
+        0 4px 8px rgba(var(--shadow-color), 0.06),
+        0 12px 24px rgba(var(--shadow-color), 0.08);
+    }
+
+    .site-header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100; padding: 0.9rem 0;
+      background: rgba(20, 17, 14, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-gold);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand-logo { display: inline-flex; align-items: center; gap: 0.75rem; }
+    .star-badge { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(135deg, var(--accent-gold), #8F6B32); display: grid; place-items: center; color: #14110E; }
+    .brand-titles { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-family: var(--font-display); font-size: 1.18rem; font-weight: 700; }
+    .brand-sub { font-size: 0.72rem; font-weight: 600; color: var(--accent-gold); margin-top: 0.15rem; }
+
+    .nav-links { display: none; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav-link { font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); padding: 0.3rem 0; }
+    .nav-link:hover, .nav-link.is-active { color: var(--accent-gold); }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      background-color: var(--accent-gold); color: #14110E; font-weight: 700; font-size: 0.9rem;
+      padding: 0.8rem 1.4rem; border-radius: 999px;
+      transition: transform 0.35s var(--spring-ease);
+    }
+    .btn-gold:hover { background-color: var(--accent-gold-hover); transform: translateY(-2px); }
+
+    .page-hero {
+      padding: 8.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .story-section { padding: 4.5rem 0; }
+    .story-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; }
+    .story-prose p { color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 1.02rem; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+    .why-box {
+      padding: 1.4rem; border-radius: 18px;
+      background: var(--bg-elevated); border: 1px solid var(--border-gold);
+    }
+    .why-box h3 { font-size: 1.15rem; color: var(--accent-gold); margin-bottom: 0.35rem; }
+    .why-box p { font-size: 0.88rem; color: var(--text-secondary); }
+
+    .branches-timeline {
+      margin-top: 3rem; padding: 2rem; border-radius: 22px;
+      background: var(--bg-elevated); border: 1px solid var(--border-gold);
+    }
+    .branch-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+    .branch-pill {
+      padding: 0.55rem 1.1rem; border-radius: 999px;
+      background: var(--accent-gold-soft); border: 1px solid var(--border-gold);
+      color: var(--accent-gold); font-weight: 700; font-size: 0.88rem;
+    }
+
+    .site-footer { padding: 3.5rem 0 2rem; border-top: 1px solid var(--border-gold); background: #0D0B09; margin-top: 4rem; }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .story-grid { grid-template-columns: 1.15fr 0.85fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="star-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span class="brand-titles">
+          <span class="brand-name">YILDIZ ASPAVA</span>
+          <span class="brand-sub">EMEK • KURULUŞ 1978</span>
+        </span>
+      </a>
+
+      <nav aria-label="Ana Menü">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="menu.html" class="nav-link">Menülerimiz</a></li>
+          <li><a href="hakkimizda.html" class="nav-link is-active">Hakkımızda</a></li>
+          <li><a href="index.html#galeri" class="nav-link">Samimi Galeri</a></li>
+          <li><a href="index.html#mobil-uygulama" class="nav-link">Mobil Uygulama</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <a href="menu.html" class="btn-gold">Menülerimiz</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span style="color: var(--accent-gold); font-size: 0.84rem; font-weight: 700;">HAKKIMIZDA • KURULUŞ 1978</span>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.6rem); margin: 0.5rem 0 1rem;">
+          Sağlık, Afiyet ve Gelenek: <span class="serif-italic" style="color: var(--accent-gold);">Yıldız Aspava'nın</span> Hikayesi.
+        </h1>
+        <p style="color: var(--text-secondary); max-width: 66ch;">
+          Esat Caddesi'nde başlayan yarım asırlık yolculuğumuz, bugün Türkiye'nin dört bir yanında aynı tutku ve kaliteyle devam ediyor.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="container story-grid">
+        <div class="story-prose">
+          <p>
+            <strong>Yıldız Aspava</strong>, Ankara'da uzun yıllardır hizmet veren ve özellikle döneriyle ün kazanmış köklü bir restoran zinciridir. İlk şubesi <strong>1978 yılında Ankara'nın Esat Caddesi'nde</strong> kurulmuştur. O dönemde mütevazı bir dönerci dükkânı olarak başlayan Yıldız Aspava, lezzeti ve kaliteli hizmet anlayışıyla kısa sürede Ankaralıların büyük beğenisini kazanmıştır.
+          </p>
+          <p>
+            Başarılı geçen yılların ardından marka; sırasıyla <strong>Emek</strong> ve <strong>Balgat</strong> semtlerinde yeni şubelerini açarak büyümesini sürdürmüştür. Bu gelişimi Ankara sınırlarının dışına taşıyan Yıldız Aspava, 4. şubesini <strong>İzmir'de</strong>, son olarak ise 5. şubesini <strong>Antalya'da</strong> açarak lezzetini farklı şehirlerle buluşturmuştur.
+          </p>
+          <p>
+            <strong>"ASPAVA"</strong> kelimesi, Ankara'ya özgü bir restoran terimi olarak yaygınlaşmış ve <em>"Allah Sağlık, Para, Afiyet Versin Amin"</em> ifadesinin kısaltması olarak kullanılmaktadır. Bu anlamlı ifade, özellikle Yıldız Aspava ile özdeşleşmiş; misafirlere sağlık ve afiyet dileğinin samimi bir yansıması olmuştur.
+          </p>
+          <p>
+            Yıldız Aspava, meşhur döneri ve yanında sunduğu zengin ikramlarıyla zaman içinde güçlü bir marka haline gelmiştir. Sadece döner sunmanın ötesine geçen restoran, geniş menüsüyle farklı damak zevklerine hitap ederek her yaştan misafirine keyifli bir deneyim sunmaktadır.
+          </p>
+          <p>
+            Yarım asrı aşkın süredir ayakta kalmayı başaran Yıldız Aspava; köklü geçmişi, değişmeyen lezzet anlayışı ve müşteri odaklı hizmet prensibiyle bugün hem Ankara'nın hem de Türkiye'nin simge restoran markalarından biri olmaya devam etmektedir.
+          </p>
+
+          <div class="branches-timeline">
+            <h2 style="font-size: 1.45rem; color: var(--accent-gold);">Türkiye Genelindeki 5 Şubemiz</h2>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.35rem;">
+              1978'den bugüne aynı ustalık ve kalite standardıyla hizmet veren şubelerimiz:
+            </p>
+            <div class="branch-pills">
+              <span class="branch-pill">1. Esat (Ankara - 1978)</span>
+              <span class="branch-pill">2. Emek (Çankaya / Ankara)</span>
+              <span class="branch-pill">3. Balgat (Ankara)</span>
+              <span class="branch-pill">4. İzmir</span>
+              <span class="branch-pill">5. Antalya</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="elevated-card" style="border-radius: 24px; overflow: hidden; margin-bottom: 1.5rem;">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Yıldız Aspava Emek samimi restoran ortamı" style="height: 310px; width: 100%;">
+          </div>
+
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Neden Biz?</h2>
+          <div class="why-grid">
+            <div class="why-box">
+              <h3>Usta Ellerin Sanatı</h3>
+              <p>1978'den beri meşe odununda pişen Ankara döneri ve geleneksel reçeteler.</p>
+            </div>
+            <div class="why-box">
+              <h3>Kalite ve Güven</h3>
+              <p>Malzeme seçiminden mutfak hazırlığına kadar en yüksek hijyen standartları.</p>
+            </div>
+            <div class="why-box">
+              <h3>Modern Atmosfer</h3>
+              <p>Sevdiklerinizle keyifli anlar geçirebileceğiniz seçkin ve ferah iç mekan.</p>
+            </div>
+            <div class="why-box">
+              <h3>ASPAVA Felsefesi</h3>
+              <p>"Allah Sağlık, Para, Afiyet Versin Amin" dileğiyle samimi aile misafirperverliği.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; color: var(--text-secondary); font-size: 0.88rem;">
+      <span>Yıldız Aspava Emek © 2025 Tüm hakları saklıdır.</span>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="menu.html">Menülerimiz</a>
+        <a href="iletisim.html">İletişim & Konum</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

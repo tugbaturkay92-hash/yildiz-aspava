@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menülerimiz (Lezzetlerimiz) | Yıldız Aspava Emek — 1978'den Beri</title>
+  <meta name="description" content="Yıldız Aspava Emek tam menüsü: Meşhur Ankara Döneri, Yıldız Special, SSK Dürüm, Geleneksel Kebaplar, Tavuk Çeşitleri, Kiremitler, Taş Fırın Pideleri ve 9 çeşit ücretsiz ikramlarımız.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314110E'/><path d='M32 10L38.5 24.5L54 26.5L42.5 37.5L45.5 53L32 45.2L18.5 53L21.5 37.5L10 26.5L25.5 24.5L32 10Z' fill='%23C59D5F'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #14110E;
+      --bg-elevated: #1D1814;
+      --bg-cream: #F4EFE6;
+      --bg-cream-card: #FAF7F2;
+      --text-primary: #F7F3EB;
+      --text-secondary: #C4B9AA;
+      --text-dark: #1B1612;
+      --text-dark-muted: #5E5349;
+      --accent-gold: #C59D5F;
+      --accent-gold-hover: #D8B274;
+      --accent-gold-soft: rgba(197, 157, 95, 0.15);
+      --accent-olive: #6F7A39;
+      --border-subtle: rgba(247, 243, 235, 0.11);
+      --border-gold: rgba(197, 157, 95, 0.36);
+      --shadow-color: 10, 7, 4;
+      --spring-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --smooth-ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --font-display: 'Playfair Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg-base); color: var(--text-primary); font-family: var(--font-body); line-height: 1.7; }
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(197, 157, 95, 0.14) 0%, transparent 40%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; line-height: 1.15; font-weight: 700; }
+    .serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+    a, button { font-family: inherit; color: inherit; text-decoration: none; cursor: pointer; }
+    .container { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 1.25rem; }
+
+    .elevated-card {
+      background-color: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 1px 2px rgba(var(--shadow-color), 0.04),
+        0 4px 8px rgba(var(--shadow-color), 0.06),
+        0 12px 24px rgba(var(--shadow-color), 0.08);
+    }
+
+    .site-header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100; padding: 0.9rem 0;
+      background: rgba(20, 17, 14, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-gold);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand-logo { display: inline-flex; align-items: center; gap: 0.75rem; }
+    .star-badge { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(135deg, var(--accent-gold), #8F6B32); display: grid; place-items: center; color: #14110E; }
+    .brand-titles { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-family: var(--font-display); font-size: 1.18rem; font-weight: 700; }
+    .brand-sub { font-size: 0.72rem; font-weight: 600; color: var(--accent-gold); margin-top: 0.15rem; }
+
+    .nav-links { display: none; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav-link { font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); padding: 0.3rem 0; position: relative; }
+    .nav-link:hover, .nav-link.is-active { color: var(--accent-gold); }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      background-color: var(--accent-gold); color: #14110E; font-weight: 700; font-size: 0.9rem;
+      padding: 0.8rem 1.4rem; border-radius: 999px; border: none;
+      transition: transform 0.35s var(--spring-ease);
+    }
+    .btn-gold:hover { background-color: var(--accent-gold-hover); transform: translateY(-2px); }
+
+    .page-hero {
+      padding: 8.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border-gold);
+      background: radial-gradient(circle at 50% 0%, rgba(197, 157, 95, 0.18) 0%, transparent 60%);
+    }
+
+    .menu-tabs {
+      display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 2.5rem 0;
+      position: sticky; top: 74px; z-index: 50;
+      background: rgba(20, 17, 14, 0.92); backdrop-filter: blur(12px);
+      padding: 0.85rem 1rem; border-radius: 18px; border: 1px solid var(--border-gold);
+    }
+
+    .menu-tab {
+      padding: 0.65rem 1.15rem; border-radius: 999px;
+      background: var(--bg-elevated); border: 1px solid var(--border-subtle);
+      color: var(--text-secondary); font-weight: 600; font-size: 0.86rem;
+      transition: transform 0.35s var(--spring-ease);
+    }
+    .menu-tab.is-active, .menu-tab:hover {
+      background: var(--accent-gold); color: #14110E; border-color: var(--accent-gold); font-weight: 700;
+    }
+
+    .menu-category-block { margin-bottom: 3.5rem; }
+    .menu-category-header {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      padding-bottom: 0.85rem; margin-bottom: 1.35rem; border-bottom: 1px solid var(--border-gold);
+    }
+    .menu-category-header h2 { font-size: 1.75rem; color: var(--accent-gold); }
+    .menu-category-header span { font-size: 0.86rem; color: var(--text-secondary); }
+
+    .menu-dishes-grid { display: grid; grid-template-columns: 1fr; gap: 0.95rem; }
+    .dish-card {
+      padding: 1.2rem 1.4rem; border-radius: 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      transition: transform 0.35s var(--spring-ease);
+    }
+    .dish-card:hover { transform: translateX(5px); border-color: var(--border-gold); }
+    .dish-info h3 { font-size: 1.06rem; color: var(--text-primary); margin-bottom: 0.15rem; }
+    .dish-info p { font-size: 0.83rem; color: var(--text-secondary); }
+
+    .dish-badge {
+      padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+      background: var(--accent-gold-soft); color: var(--accent-gold); border: 1px solid var(--border-gold);
+      white-space: nowrap;
+    }
+    .dish-badge.free-badge {
+      background: rgba(111, 122, 57, 0.25); color: #C5E08B; border-color: rgba(197, 224, 139, 0.4);
+    }
+
+    .site-footer { padding: 3.5rem 0 2rem; border-top: 1px solid var(--border-gold); background: #0D0B09; margin-top: 4rem; }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 2rem; }
+      .menu-dishes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .menu-dishes-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="star-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span class="brand-titles">
+          <span class="brand-name">YILDIZ ASPAVA</span>
+          <span class="brand-sub">EMEK • KURULUŞ 1978</span>
+        </span>
+      </a>
+
+      <nav aria-label="Ana Menü">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="menu.html" class="nav-link is-active">Menülerimiz</a></li>
+          <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+          <li><a href="index.html#galeri" class="nav-link">Samimi Galeri</a></li>
+          <li><a href="index.html#mobil-uygulama" class="nav-link">Mobil Uygulama</a></li>
+          <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+903122227500" class="btn-gold">(0312) 222 75 00</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span style="color: var(--accent-gold); font-size: 0.84rem; font-weight: 700;">YILDIZ ASPAVA EMEK • LEZZETLERİMİZ</span>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.6rem); margin: 0.5rem 0 1rem;">
+          1978'den Beri Değişmeyen <span class="serif-italic" style="color: var(--accent-gold);">Tam Menümüz.</span>
+        </h1>
+        <p style="color: var(--text-secondary); max-width: 64ch;">
+          Meşe odununda ağır ağır pişen meşhur Ankara dönerimizden köz ateşindeki geleneksel kebaplarımıza, taş fırın pidelerimizden masanıza ücretsiz sunulan 9 çeşit zengin ikramımıza kadar tüm lezzetlerimiz.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab is-active" data-menu-filter="all">Tüm Menü (50 Çeşit)</button>
+        <button class="menu-tab" data-menu-filter="kebaplar">A. Kebaplar (9)</button>
+        <button class="menu-tab" data-menu-filter="tavuk">B. Tavuk Çeşitleri (6)</button>
+        <button class="menu-tab" data-menu-filter="donerler">C. Dönerler (9)</button>
+        <button class="menu-tab" data-menu-filter="kiremitler">D. Kiremitler (3)</button>
+        <button class="menu-tab" data-menu-filter="pideler">E. Pideler (10)</button>
+        <button class="menu-tab" data-menu-filter="aperatifler">F. Aperatifler (4)</button>
+        <button class="menu-tab" data-menu-filter="ikramlar">G. İkramlar (9)</button>
+      </div>
+
+      <!-- A. KEBAPLAR -->
+      <div class="menu-category-block" id="kebaplar" data-menu-cat="kebaplar">
+        <div class="menu-category-header">
+          <h2>A. Kebaplar</h2>
+          <span>Usta ellerde hayat bulan, köz ateşinin isli aromasıyla harmanlanmış kebap sanatı</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Adana Kebap</h3><p>Zırh kıymasıyla köz ateşinde pişen acılı geleneksel kebap</p></div><span class="dish-badge">Köz Ateşi</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Urfa Kebap</h3><p>Acısız, közlenmiş biber ve domates eşliğinde zırh kebabı</p></div><span class="dish-badge">Köz Ateşi</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Beyti Kebap</h3><p>Sarımsaklı yoğurt ve tereyağlı sosla lavaşa sarılı kebap</p></div><span class="dish-badge">Seçkin</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Ali Nazik</h3><p>Köz patlıcanlı süzme yoğurt yatağında lokum kıvamında et</p></div><span class="dish-badge">Özel Reçete</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Et Çöp Şiş</h3><p>Özel marine edilmiş yumuşacık çöp şiş</p></div><span class="dish-badge">Köz Ateşi</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Et Şiş</h3><p>Dinlendirilmiş seçkin etlerden sulu ve yumuşak şiş kebap</p></div><span class="dish-badge">Köz Ateşi</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>ASPAVA KEBAP</h3><p>Yıldız Aspava'nın imza kebap spesiyali</p></div><span class="dish-badge">★ İmza Lezzet</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Patlıcan Kebap</h3><p>Taze patlıcan dilimleri ve zırh kıymasının közde uyumu</p></div><span class="dish-badge">Geleneksel</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Domatesli Kebap</h3><p>Sulu salkım domateslerle közde harmanlanan kebap</p></div><span class="dish-badge">Geleneksel</span></div>
+        </div>
+      </div>
+
+      <!-- B. TAVUK ÇEŞİTLERİ -->
+      <div class="menu-category-block" id="tavuk" data-menu-cat="tavuk">
+        <div class="menu-category-header">
+          <h2>B. Tavuk Çeşitleri</h2>
+          <span>Özel marinasyon ve köz ateşinde ızgara lezzetleri</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Çöp Şiş</h3><p>Özel sosla marine edilmiş yumuşak tavuk çöp şiş</p></div><span class="dish-badge">Izgara</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Pirzola</h3><p>Köz ateşinde nar gibi kızarmış sulu tavuk pirzola</p></div><span class="dish-badge">Izgara</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Külbastı</h3><p>Baharat ve zeytinyağı marinasyonlu ızgara külbastı</p></div><span class="dish-badge">Özel Soslu</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Kanat</h3><p>Közde ağır ağır pişmiş çıtır yaprak kanat</p></div><span class="dish-badge">Köz Ateşi</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Biftek</h3><p>Yumuşacık dokusuyla ızgara tavuk biftek</p></div><span class="dish-badge">Izgara</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Tavuk Şiş</h3><p>Közlenmiş biber ve domates eşliğinde klasik tavuk şiş</p></div><span class="dish-badge">Klasik</span></div>
+        </div>
+      </div>
+
+      <!-- C. DÖNERLER -->
+      <div class="menu-category-block" id="donerler" data-menu-cat="donerler">
+        <div class="menu-category-header">
+          <h2>C. Dönerler</h2>
+          <span>1978'den beri değişmeyen özel reçetemizle, meşe odununda pişen eşsiz Ankara döneri</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>YILDIZ SPECIAL</h3><p>Yıldız Aspava'nın meşe odunu ateşinde pişen imza spesiyali</p></div><span class="dish-badge">★ İmza Spesiyal</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Servis Döner</h3><p>Meşe odununda ağır ağır pişmiş yaprak Ankara döneri</p></div><span class="dish-badge">Meşe Odunu</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>İskender</h3><p>Tereyağlı, özel domates soslu ve yoğurtlu döner</p></div><span class="dish-badge">Klasik</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Döner Beyti</h3><p>Lavaş sarılı, özel sos ve yoğurt eşliğinde döner beyti</p></div><span class="dish-badge">Özel Sunum</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Pilav Üstü Döner</h3><p>Tereyağlı pirinç pilavı üzerinde yaprak döner</p></div><span class="dish-badge">Geleneksel</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Sade Dürüm Döner</h3><p>Sıcak lavaş içinde meşe odunu döner lezzeti</p></div><span class="dish-badge">Dürüm</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Sos Soğan Dürüm</h3><p>Özel Aspava sosu ve soğanlı sıcak dürüm döner</p></div><span class="dish-badge">Dürüm</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Sos Soğan Kaşar Dürüm (SSK)</h3><p>Özel sos, soğan ve eriyen kaşar peyniriyle Ankara klasiği</p></div><span class="dish-badge">★ SSK Fenomeni</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Sos Kaşar Dürüm</h3><p>Özel sos ve eriyen kaşar peynirli dürüm döner</p></div><span class="dish-badge">Dürüm</span></div>
+        </div>
+      </div>
+
+      <!-- D. KİREMİTLER -->
+      <div class="menu-category-block" id="kiremitler" data-menu-cat="kiremitler">
+        <div class="menu-category-header">
+          <h2>D. Kiremitler</h2>
+          <span>Taş fırında toprak kiremit içinde sıcak sunumlar</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kiremitte Şiş</h3><p>Toprak kiremitte özel sos ve tereyağıyla fırınlanmış et şiş</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kiremitte Köfte</h3><p>Taş fırında kiremit içinde pişen sulu ızgara köfte</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kiremitte Tavuk</h3><p>Sebze ve özel sosla fırınlanmış kiremitte tavuk</p></div><span class="dish-badge">Taş Fırın</span></div>
+        </div>
+      </div>
+
+      <!-- E. PİDELER -->
+      <div class="menu-category-block" id="pideler" data-menu-cat="pideler">
+        <div class="menu-category-header">
+          <h2>E. Pideler</h2>
+          <span>Geleneksel taş fırınımızdan çıkan çıtır hamur ve en taze malzemeler</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>KARIŞIK PİDE</h3><p>Kuşbaşı, kıyma ve kaşar peynirinin taş fırındaki şöleni</p></div><span class="dish-badge">★ Çok Sevilen</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kuşbaşılı Pide</h3><p>Özel doğranmış dinlendirilmiş etli çıtır pide</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kaşarlı Pide</h3><p>Bol taze kaşar peynirli sıcak taş fırın pidesi</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Beyaz Peynirli Pide</h3><p>Tam yağlı beyaz peynir ve tereyağı dokunuşlu pide</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kıymalı Pide</h3><p>Geleneksel harçlı, ince ve çıtır kıymalı pide</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>KUŞBAŞILI KAŞARLI PİDE</h3><p>Yumuşak kuşbaşı et ve eriyen kaşar peynirli taş fırın pidesi</p></div><span class="dish-badge">★ Favori</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kapalı Pide</h3><p>Lezzetini içinde hapseden tereyağlı kapalı pide</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kıymalı Kaşarlı Pide</h3><p>Kıyma harcı ve kaşar peynirinin uyumu</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Kaşarlı Mantarlı Pide</h3><p>Taze kültür mantarı ve eriyen kaşar peynirli pide</p></div><span class="dish-badge">Taş Fırın</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>LAHMACUN</h3><p>Taş fırından dumanı üstünde çıkan çıtır lahmacun</p></div><span class="dish-badge">Taş Fırın</span></div>
+        </div>
+      </div>
+
+      <!-- F. APERATİFLER -->
+      <div class="menu-category-block" id="aperatifler" data-menu-cat="aperatifler">
+        <div class="menu-category-header">
+          <h2>F. Aperatifler</h2>
+          <span>Tamamlayıcı başlangıçlar ve sıcak künefe</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Günün Çorbası</h3><p>Geleneksel usulde günlük taze hazırlanan sıcak çorba</p></div><span class="dish-badge">Başlangıç</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Çoban Salata</h3><p>Günlük taze doğranmış zeytinyağlı çoban salata</p></div><span class="dish-badge">Taze</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Künefe</h3><p>Sıcak şerbetli ve bol Antep fıstıklı çıtır künefe</p></div><span class="dish-badge">Sıcak Tatlı</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>İçli Köfte</h3><p>İnce bulgur dışı ve cevizli kıymalı iç harcıyla içli köfte</p></div><span class="dish-badge">Geleneksel</span></div>
+        </div>
+      </div>
+
+      <!-- G. İKRAMLAR -->
+      <div class="menu-category-block" id="ikramlar" data-menu-cat="ikramlar">
+        <div class="menu-category-header">
+          <h2>G. İkramlar</h2>
+          <span>ASPAVA geleneğimizle masanıza ücretsiz sunulan zengin ikramlarımız</span>
+        </div>
+        <div class="menu-dishes-grid">
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Patates</h3><p>Sıcak servis edilen patates kızartması</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Salata</h3><p>Taze mevsim salatası</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Cacık</h3><p>Naneli, süzme yoğurtlu ferahlatıcı cacık</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Dondurmalı İrmik</h3><p>Yemek sonrası meşhur sıcak dondurmalı irmik helvası</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Çiğ Köfte</h3><p>Yeşillik ve nar ekşisiyle çiğ köfte</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Ezme</h3><p>Günlük hazırlanan taze domates ezmesi</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Soğuk Baklava</h3><p>Sütlü şerbetli soğuk baklava ikramı</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Türk Kahvesi</h3><p>Bol köpüklü Türk kahvesi</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+          <div class="dish-card elevated-card"><div class="dish-info"><h3>Semaverde Çay</h3><p>Yemek sonrası sınırsız taze demlenmiş çay</p></div><span class="dish-badge free-badge">Ücretsiz İkram</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; color: var(--text-secondary); font-size: 0.88rem;">
+      <span>Yıldız Aspava Emek © 2025 Tüm hakları saklıdır.</span>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim & Konum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    const tabs = document.querySelectorAll('.menu-tab');
+    const blocks = document.querySelectorAll('.menu-category-block');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const f = tab.getAttribute('data-menu-filter');
+        tabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        blocks.forEach(b => {
+          b.style.display = (f === 'all' || b.getAttribute('data-menu-cat') === f) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim ve Ulaşım Bilgileri | Yıldız Aspava Emek — Çankaya / Ankara</title>
+  <meta name="description" content="Yıldız Aspava Emek İletişim: Emek Mah. Bişkek Cad. No: 64 B Çankaya / Ankara. Telefon: (0312) 222 75 00. Çalışma Saatleri: 11.00 - 22.00.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314110E'/><path d='M32 10L38.5 24.5L54 26.5L42.5 37.5L45.5 53L32 45.2L18.5 53L21.5 37.5L10 26.5L25.5 24.5L32 10Z' fill='%23C59D5F'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #14110E;
+      --bg-elevated: #1D1814;
+      --text-primary: #F7F3EB;
+      --text-secondary: #C4B9AA;
+      --accent-gold: #C59D5F;
+      --accent-gold-hover: #D8B274;
+      --accent-gold-soft: rgba(197, 157, 95, 0.15);
+      --border-subtle: rgba(247, 243, 235, 0.11);
+      --border-gold: rgba(197, 157, 95, 0.36);
+      --shadow-color: 10, 7, 4;
+      --spring-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --font-display: 'Playfair Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg-base); color: var(--text-primary); font-family: var(--font-body); line-height: 1.7; }
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(197, 157, 95, 0.14) 0%, transparent 42%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; line-height: 1.15; font-weight: 700; }
+    .serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 600; }
+    a, button { font-family: inherit; color: inherit; text-decoration: none; cursor: pointer; }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 1.25rem; }
+
+    .elevated-card {
+      background-color: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 1px 2px rgba(var(--shadow-color), 0.04),
+        0 4px 8px rgba(var(--shadow-color), 0.06),
+        0 12px 24px rgba(var(--shadow-color), 0.08);
+    }
+
+    .site-header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100; padding: 0.9rem 0;
+      background: rgba(20, 17, 14, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-gold);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand-logo { display: inline-flex; align-items: center; gap: 0.75rem; }
+    .star-badge { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(135deg, var(--accent-gold), #8F6B32); display: grid; place-items: center; color: #14110E; }
+    .brand-titles { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-family: var(--font-display); font-size: 1.18rem; font-weight: 700; }
+    .brand-sub { font-size: 0.72rem; font-weight: 600; color: var(--accent-gold); margin-top: 0.15rem; }
+
+    .nav-links { display: none; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav-link { font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); padding: 0.3rem 0; }
+    .nav-link:hover, .nav-link.is-active { color: var(--accent-gold); }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      background-color: var(--accent-gold); color: #14110E; font-weight: 700; font-size: 0.9rem;
+      padding: 0.8rem 1.4rem; border-radius: 999px; border: none;
+      transition: transform 0.35s var(--spring-ease);
+    }
+    .btn-gold:hover { background-color: var(--accent-gold-hover); transform: translateY(-2px); }
+
+    .page-hero {
+      padding: 8.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .contact-layout {
+      padding: 4.5rem 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .info-panel {
+      border-radius: 24px;
+      padding: 2.25rem;
+      border: 1px solid var(--border-gold);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .info-list li {
+      padding: 1rem 1.15rem;
+      border-radius: 14px;
+      background: rgba(247, 243, 235, 0.03);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .info-list strong {
+      display: block;
+      color: var(--accent-gold);
+      font-size: 0.84rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .map-panel {
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 450px;
+      border: 1px solid var(--border-gold);
+      display: flex;
+    }
+
+    .map-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+      border: 0;
+      flex: 1;
+    }
+
+    .kvkk-section {
+      margin: 1rem 0 4rem;
+      padding: 2.25rem;
+      border-radius: 24px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .kvkk-section ol {
+      padding-left: 1.25rem;
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.92rem;
+    }
+
+    .site-footer { padding: 3.5rem 0 2rem; border-top: 1px solid var(--border-gold); background: #0D0B09; }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .contact-layout { grid-template-columns: 0.95fr 1.05fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="star-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span class="brand-titles">
+          <span class="brand-name">YILDIZ ASPAVA</span>
+          <span class="brand-sub">EMEK • KURULUŞ 1978</span>
+        </span>
+      </a>
+
+      <nav aria-label="Ana Menü">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="menu.html" class="nav-link">Menülerimiz</a></li>
+          <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+          <li><a href="index.html#galeri" class="nav-link">Samimi Galeri</a></li>
+          <li><a href="index.html#mobil-uygulama" class="nav-link">Mobil Uygulama</a></li>
+          <li><a href="iletisim.html" class="nav-link is-active">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+903122227500" class="btn-gold">(0312) 222 75 00</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span style="color: var(--accent-gold); font-size: 0.84rem; font-weight: 700;">İLETİŞİM VE ULAŞIM BİLGİLERİ</span>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.6rem); margin: 0.5rem 0 1rem;">
+          Yıldız Aspava <span class="serif-italic" style="color: var(--accent-gold);">Emek</span> Şubesi İletişim.
+        </h1>
+        <p style="color: var(--text-secondary); max-width: 64ch;">
+          Geleneksel reçetelerimizi, meşe odununda pişen Ankara dönerimizi ve zengin ikramlarımızı deneyimlemek için sizleri Çankaya Emek şubemize bekliyoruz.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="contact-layout">
+        <div class="info-panel elevated-card">
+          <h2 style="font-size: 1.65rem; color: var(--accent-gold);">Doğrudan İletişim</h2>
+          <ul class="info-list">
+            <li>
+              <strong>ADRESİMİZ</strong>
+              <span>Emek Mah. Bişkek Cad. No: 64 B Çankaya / Ankara</span>
+            </li>
+            <li>
+              <strong>ÇALIŞMA SAATLERİMİZ</strong>
+              <span>Her Gün: 11.00 - 22.00</span>
+            </li>
+            <li>
+              <strong>TELEFON</strong>
+              <a href="tel:+903122227500" style="font-size: 1.15rem; font-weight: 700;">(0312) 222 75 00</a>
+            </li>
+            <li>
+              <strong>E-POSTA</strong>
+              <a href="mailto:info@yildizaspavaemek.com">info@yildizaspavaemek.com</a>
+            </li>
+            <li>
+              <strong>RESMİ SOSYAL MEDYA HESAPLARIMIZ</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.35rem;">
+                <a href="https://www.instagram.com/yildizaspavaemek/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); font-weight: 600;">Instagram (@yildizaspavaemek)</a>
+                <a href="https://www.facebook.com/yildiz.aspava.esat.emek.balgat/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); font-weight: 600;">Facebook Resmi Sayfa</a>
+              </div>
+            </li>
+          </ul>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.85rem;">
+            <a href="tel:+903122227500" class="btn-gold">Şubeyi Hemen Ara</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Emek+Mah.+Bi%C5%9Fkek+Cad.+No:+64+B+%C3%87ankaya+Ankara" target="_blank" rel="noopener noreferrer" class="btn-gold" style="background: transparent; color: var(--accent-gold); border: 1px solid var(--border-gold);">
+              Google Haritalar'da Yol Tarifi Al
+            </a>
+          </div>
+        </div>
+
+        <div class="map-panel elevated-card">
+          <iframe
+            title="Yıldız Aspava Emek Google Haritalar Konumu"
+            src="https://maps.google.com/maps?q=Emek+Mah.+Bi%C5%9Fkek+Cad.+No:64+B+%C3%87ankaya+Ankara&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <!-- 7. Gizlilik Politikası (KVKK) -->
+      <section id="kvkk" class="kvkk-section elevated-card">
+        <h2 style="font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 0.6rem;">Gizlilik Politikası (KVKK)</h2>
+        <p style="color: var(--text-secondary); font-size: 0.94rem;">
+          Yıldız Aspava Emek Şubesi olarak, ziyaretçilerimizin ve müşterilerimizin kişisel verilerinin gizliliğine önem veriyoruz. Bu gizlilik politikası, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında, kişisel verilerin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır.
+        </p>
+        <ol>
+          <li><strong>Toplanan Kişisel Veriler:</strong> Web sitemiz üzerinden veya doğrudan iletişim yoluyla ad, soyad, telefon numarası ve benzeri iletişim bilgileri talep edilebilir. Toplanan veriler, yalnızca hizmet sunumu ve iletişim amacıyla kullanılmaktadır.</li>
+          <li><strong>Kişisel Verilerin Kullanım Amacı:</strong> Toplanan kişisel veriler; müşterilerimize hizmet sunmak, talep ve sorulara yanıt vermek, iletişim sağlamak amaçlarıyla işlenmektedir.</li>
+          <li><strong>Kişisel Verilerin Korunması:</strong> Kişisel veriler, yetkisiz erişim, kayıp veya kötüye kullanıma karşı gerekli teknik ve idari güvenlik önlemleri alınarak korunmaktadır.</li>
+          <li><strong>Üçüncü Taraflarla Paylaşım:</strong> Kişisel veriler, yasal zorunluluklar dışında üçüncü kişilerle paylaşılmamaktadır.</li>
+          <li><strong>Çerezler (Cookies):</strong> Web sitemizde kullanıcı deneyimini iyileştirmek amacıyla çerezler kullanılabilir. Çerezler, kişisel veri niteliği taşımayan bilgiler içermektedir.</li>
+          <li><strong>Veri Sahibi Hakları:</strong> KVKK kapsamında, kişisel veri sahipleri; verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini talep etme haklarına sahiptir.</li>
+          <li><strong>İletişim:</strong> Gizlilik politikamızla ilgili her türlü soru ve talepleriniz için bizimle iletişime geçebilirsiniz.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; color: var(--text-secondary); font-size: 0.88rem;">
+      <span>Yıldız Aspava Emek © 2025 Tüm hakları saklıdır.</span>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="menu.html">Menülerimiz</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
