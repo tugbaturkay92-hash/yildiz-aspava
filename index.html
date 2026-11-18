@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
     "name": "Yıldız Aspava Emek - Ankara'nın Lezzet Mirası",
     "foundingDate": "1978",
     "url": "https://yildizaspavaemek.com/",
-    "telephone": "+90-312-222-7500",
+    "telephone": "+90-552-119-3095",
     "email": "info@yildizaspavaemek.com",
     "servesCuisine": ["Türk Mutfağı", "Ankara Döneri", "Kebap", "Taş Fırın Pide"],
     "priceRange": "₺₺",
@@ -1118,6 +1118,7 @@
           <li><button class="top-nav-title" data-goto="galeri">Galeri</button></li>
           <li><button class="top-nav-title" data-goto="hakkimizda">Hakkımızda</button></li>
           <li><button class="top-nav-title" data-goto="iletisim">İletişim</button></li>
+          <li><a href="http://localhost:3000/rezervasyon" target="_blank" rel="noopener noreferrer" class="top-nav-title" style="text-decoration: none; background: linear-gradient(135deg, #9E1B1B, #781313); color: #FAF7F2; padding: 0.45rem 1.15rem; border-radius: 999px; border: 1px solid var(--gold-primary); font-size: 0.95rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.45rem; box-shadow: 0 4px 12px rgba(158, 27, 27, 0.4); cursor: pointer; transition: transform 0.2s ease;"><span>📅 Masa Rezervasyonu</span></a></li>
         </ul>
       </nav>
 
@@ -1134,8 +1135,9 @@
         <li><button data-goto="galeri">Fotoğraf Galerisi</button></li>
         <li><button data-goto="hakkimizda">Hakkımızda</button></li>
         <li><button data-goto="iletisim">İletişim</button></li>
+        <li><button onclick="openReservationModal(); var d = document.getElementById('mobileDrawer'); if (d) d.classList.remove('is-open');" style="color: var(--gold-light); font-weight: 700;">📅 Online Masa Rezervasyonu</button></li>
       </ul>
-      <a href="tel:+903122227500" class="btn-gold" style="width: 100%;">(0312) 222 75 00</a>
+      <a href="tel:+905521193095" class="btn-gold" style="width: 100%;">(0552) 119 30 95</a>
     </div>
   </header>
 
@@ -1179,8 +1181,8 @@
               <button class="btn-light-outline" data-goto="galeri">
                 <span>Fotoğraf Galerisi</span>
               </button>
-              <a href="tel:+903122227500" class="btn-light-outline">
-                <span>(0312) 222 75 00</span>
+              <a href="tel:+905521193095" class="btn-light-outline">
+                <span>(0552) 119 30 95</span>
               </a>
             </div>
           </div>
@@ -1368,6 +1370,11 @@
                 <span>✓ Şube Yol Tarifi & İletişim</span>
               </div>
 
+                            <div style="margin-top: 1.25rem;">
+                <button class="btn-gold" onclick="openReservationModal()" style="background: #9E1B1B; color: #FAF7F2; border: 1px solid var(--gold-primary); font-size: 0.95rem; font-weight: 700; padding: 0.85rem 1.6rem; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 6px 18px rgba(158, 27, 27, 0.45);">
+                  <span>📅 Hemen Masa Rezervasyonu Yap</span>
+                </button>
+              </div>
               <div class="store-row">
                 <button class="store-btn" data-app-dl="iOS App Store">
                   <div>
@@ -1402,7 +1409,7 @@
                   <strong style="display: block;">Dondurmalı İrmik & Semaver Çay</strong>
                   <span>Masaya QR ile Anında İkram Çağır</span>
                 </div>
-                <a href="tel:+903122227500" class="btn-gold" style="width: 100%; font-size: 0.8rem; padding: 0.6rem;">(0312) 222 75 00 Ara</a>
+                <a href="tel:+905521193095" class="btn-gold" style="width: 100%; font-size: 0.8rem; padding: 0.6rem;">(0552) 119 30 95 Ara</a>
               </div>
             </div>
           </div>
@@ -1592,7 +1599,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Tek Porsiyon (Dürüm)</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1614,7 +1621,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Özel Porsiyon</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1636,7 +1643,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">1,5 veya 1 Porsiyon</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1658,7 +1665,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Net 150 gr Döner</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1680,7 +1687,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Tereyağlı Pilav</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1702,7 +1709,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Hafif & Doğal</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1733,7 +1740,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Zırh Kıyması</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1755,7 +1762,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Hafif & Sulu</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1777,7 +1784,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Sarımsaklı Sos</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1799,7 +1806,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Köz Patlıcanlı</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1821,7 +1828,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Özel Marinasyon</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1843,7 +1850,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Özel Reçete</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1874,7 +1881,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Izgara Lezzeti</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1896,7 +1903,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Hafif Porsiyon</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1918,7 +1925,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Izgara Kanat</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1949,7 +1956,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Taş Fırın</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1971,7 +1978,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Odun Ateşi</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -1993,7 +2000,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Hafif & Lezzetli</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -2015,7 +2022,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Tek Adet</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -2045,7 +2052,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Fokurdayan Güveç</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -2066,7 +2073,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Toprak Kiremit</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -2119,7 +2126,7 @@
                   </div>
                   <div class="menu-photo-footer">
                     <span style="font-size: 0.78rem; color: #8F6822; font-weight: 700;">Taze Pişirilir</span>
-                    <a href="tel:+903122227500" class="menu-order-btn">Sipariş: (0312) 222 75 00</a>
+                    <a href="tel:+905521193095" class="menu-order-btn">Sipariş: (0552) 119 30 95</a>
                   </div>
                 </div>
               </article>
@@ -2315,7 +2322,7 @@
                 </li>
                 <li>
                   <strong style="display: block; color: #8F6822; font-size: 0.82rem;">TELEFON</strong>
-                  <a href="tel:+903122227500" style="font-size: 1.2rem; font-weight: 700;">(0312) 222 75 00</a>
+                  <a href="tel:+905521193095" style="font-size: 1.2rem; font-weight: 700;">(0552) 119 30 95</a>
                 </li>
                 <li>
                   <strong style="display: block; color: #8F6822; font-size: 0.82rem;">E-POSTA</strong>
@@ -2331,7 +2338,7 @@
               </ul>
 
               <div style="display: flex; flex-wrap: wrap; gap: 0.85rem;">
-                <a href="tel:+903122227500" class="btn-gold">Şubeyi Hemen Ara</a>
+                <a href="tel:+905521193095" class="btn-gold">Şubeyi Hemen Ara</a>
                 <a href="https://www.google.com/maps/search/?api=1&query=Emek+Mah.+Bi%C5%9Fkek+Cad.+No:+64+B+%C3%87ankaya+Ankara" target="_blank" rel="noopener noreferrer" class="btn-gold" style="background: var(--bg-dark); color: var(--gold-light);">Google Haritalar'da Yol Tarifi Aç</a>
               </div>
             </div>
@@ -2398,6 +2405,7 @@
             <li><button data-goto="galeri">Fotoğraf Galerisi</button></li>
             <li><button data-goto="hakkimizda">Hakkımızda</button></li>
             <li><button data-goto="iletisim">İletişim</button></li>
+        <li><button onclick="openReservationModal(); var d = document.getElementById('mobileDrawer'); if (d) d.classList.remove('is-open');" style="color: var(--gold-light); font-weight: 700;">📅 Online Masa Rezervasyonu</button></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -2413,7 +2421,7 @@
           <ul class="footer-links">
             <li>Emek Mah. Bişkek Cad. No: 64 B Çankaya / Ankara</li>
             <li>Çalışma Saatleri: 11.00 - 22.00</li>
-            <li><a href="tel:+903122227500">(0312) 222 75 00</a></li>
+            <li><a href="tel:+905521193095">(0552) 119 30 95</a></li>
             <li><a href="mailto:info@yildizaspavaemek.com">info@yildizaspavaemek.com</a></li>
           </ul>
         </div>
@@ -2544,6 +2552,61 @@
         const open = box.classList.toggle('is-open');
         btn.textContent = open ? 'Yazıyı Daralt' : 'Tamamını Oku';
       });
+    });
+  </script>
+  <!-- ==========================================
+       YILDIZ ASPAVA ONLINE REZERVASYON MODALI
+       ========================================== -->
+  <div id="reservationModal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(10, 8, 6, 0.88); backdrop-filter: blur(10px); justify-content: center; align-items: center; padding: 1rem;">
+    <div style="position: relative; width: 100%; max-width: 950px; height: 90vh; max-height: 850px; background: #0f172a; border: 1.5px solid rgba(200, 155, 60, 0.45); border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px -15px rgba(0,0,0,0.95); display: flex; flex-direction: column;">
+      
+      <!-- Modal Header -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1.4rem; background: #16120F; border-bottom: 1px solid rgba(200, 155, 60, 0.3);">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.3rem;">⭐</span>
+          <div>
+            <strong style="color: #FAF7F2; font-size: 1rem; display: block; font-family: var(--font-display, sans-serif); letter-spacing: 0.02em;">Yıldız Aspava Emek — Online Masa Rezervasyonu</strong>
+            <small style="color: #C89B3C; font-size: 0.75rem; font-weight: 600;">Canlı Rezervasyon & QR Menü Sistemi</small>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <a href="http://localhost:3000/rezervasyon" target="_blank" rel="noopener noreferrer" style="color: #DFD5C7; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: 8px; border: 1px solid rgba(200,155,60,0.35); background: rgba(200,155,60,0.1); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; transition: background 0.2s ease;">
+            <span>Yeni Sekmede Aç ↗</span>
+          </a>
+          <button onclick="closeReservationModal()" style="background: none; border: none; color: #FAF7F2; font-size: 1.8rem; cursor: pointer; padding: 0 0.4rem; line-height: 1; transition: color 0.2s;" onmouseover="this.style.color='#C89B3C'" onmouseout="this.style.color='#FAF7F2'">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Iframe) -->
+      <div style="flex: 1; width: 100%; height: 100%; background: #0b0f19; position: relative;">
+        <iframe id="reservationIframe" src="" style="width: 100%; height: 100%; border: none;" title="Yıldız Aspava Masa Rezervasyonu"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openReservationModal() {
+      var modal = document.getElementById('reservationModal');
+      var iframe = document.getElementById('reservationIframe');
+      if (modal && iframe) {
+        if (!iframe.src || iframe.src.indexOf('localhost:3000') === -1) {
+          iframe.src = 'http://localhost:3000/rezervasyon';
+        }
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeReservationModal() {
+      var modal = document.getElementById('reservationModal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeReservationModal();
     });
   </script>
 </body>
