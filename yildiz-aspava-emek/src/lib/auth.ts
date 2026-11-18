@@ -9,7 +9,9 @@ export interface SessionData {
 }
 
 export const sessionOptions = {
-  password: process.env.SESSION_SECRET as string,
+  password: (process.env.SESSION_SECRET && process.env.SESSION_SECRET.length >= 32)
+    ? process.env.SESSION_SECRET
+    : 'lokanta-qr-menu-gizli-oturum-anahtari-2026-super-secret-key',
   cookieName: 'lokanta-session',
   cookieOptions: {
     secure: process.env.NODE_ENV === 'production',

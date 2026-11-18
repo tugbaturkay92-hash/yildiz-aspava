@@ -1,9 +1,15 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import PublicHeader from '@/components/PublicHeader';
 import PublicFooter from '@/components/PublicFooter';
-import { MapPin, Phone, Clock, Star, Sparkles } from 'lucide-react';
+import QRCodeModal from '@/components/QRCodeModal';
+import { MapPin, Phone, Clock, Star, Sparkles, QrCode } from 'lucide-react';
 
 export default function LandingPage() {
+  const [showQRModal, setShowQRModal] = useState(false);
+
   return (
     <>
       <PublicHeader />
@@ -22,7 +28,7 @@ export default function LandingPage() {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-[#14110E]/80 to-[#9E1B1B]/20" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-12">
           <div className="inline-flex items-center gap-2 bg-[#C59D5F]/15 border border-[#C59D5F]/40 px-4 py-1.5 rounded-full text-[#C59D5F] text-xs font-bold tracking-[0.25em] uppercase mb-6">
             <Sparkles size={14} /> 1978'den Beri — Emek, Ankara
           </div>
@@ -33,18 +39,28 @@ export default function LandingPage() {
           <p className="text-[#C4B9AA] text-lg max-w-2xl mb-10 leading-relaxed font-light">
             Meşe odununda pişen meşhur Ankara yaprak döneri, SSK dürüm, Yıldız Special, taş fırın pideleri ve 9 çeşit zengin ücretsiz ikram ritüelimizle Emek Bişkek Caddesi'nde hizmetinizdeyiz.
           </p>
-          <div className="flex flex-wrap gap-4">
+
+          <div className="flex flex-wrap gap-4 items-center">
             <Link
               href="/rezervasyon"
-              className="bg-[#9E1B1B] text-white px-10 py-4 rounded-full text-sm font-bold tracking-widest uppercase hover:bg-[#7D1515] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#9E1B1B]/30"
+              className="bg-[#9E1B1B] text-white px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#7D1515] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#9E1B1B]/30"
             >
               Online Masa Rezervasyonu
             </Link>
+
+            <button
+              onClick={() => setShowQRModal(true)}
+              className="flex items-center gap-2 bg-[#C59D5F] text-[#14110E] px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#d8b375] transition-all hover:-translate-y-0.5 shadow-lg"
+            >
+              <QrCode size={18} />
+              QR Kodu Göster & Okut
+            </button>
+
             <Link
               href="/menu"
-              className="border-2 border-[#C59D5F] text-[#C59D5F] px-10 py-4 rounded-full text-sm font-bold tracking-widest uppercase hover:bg-[#C59D5F] hover:text-[#14110E] transition-all hover:-translate-y-0.5"
+              className="border-2 border-white/20 text-white/90 px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-white/10 hover:border-white transition-all hover:-translate-y-0.5"
             >
-              QR Menüyü İncele
+              Menü Listesini İncele
             </Link>
           </div>
         </div>
@@ -121,26 +137,20 @@ export default function LandingPage() {
           </p>
           <Link
             href="/rezervasyon"
-            className="inline-block bg-[#9E1B1B] text-white px-12 py-4 rounded-full text-sm font-bold tracking-widest uppercase hover:bg-[#7D1515] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#9E1B1B]/40"
+            className="inline-block bg-[#9E1B1B] text-white px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#7D1515] transition-all hover:-translate-y-0.5 shadow-lg shadow-[#9E1B1B]/30"
           >
             Masa Rezervasyonu Yap
           </Link>
         </div>
       </section>
 
-      {/* Floating WhatsApp */}
-      <a
-        href="https://wa.me/905521193095?text=Merhaba%2C%20Y%C4%B1ld%C4%B1z%20Aspava%20Emek%20rezervasyon%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25d366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform"
-        aria-label="WhatsApp"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.849L.057 23.5l5.82-1.526A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.655-.511-5.18-1.402l-.371-.22-3.455.905.923-3.36-.241-.387A9.955 9.955 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
-        </svg>
-      </a>
+      {/* QR Modal */}
+      <QRCodeModal
+        isOpen={showQRModal}
+        onClose={() => setShowQRModal(false)}
+        title="Yıldız Aspava QR Menü"
+        subtitle="Masanızda otururken telefonunuzun kamerasıyla bu QR kodu okutun, menü doğrudan telefonunuzda açılsın."
+      />
 
       <PublicFooter />
     </>
